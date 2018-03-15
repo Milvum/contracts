@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "build",
+    "rootDir": "src",
+    "declaration": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowUnreachableCode": false,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "typeRoots" : [
+      "node_modules/@types/",
+      "node_modules/web3-typed/callback/"
+    ]
+  },
+  "exclude": [
+    "build",
+    "contracts",
+    "migrations",
+    "node_modules"
+  ]
+}

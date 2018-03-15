@@ -1,0 +1,8 @@
+/src
+/node_modules
+/migrations
+/test
+/contracts
+truffle-config.js
+.babelrc
+.gitignore

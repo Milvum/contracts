@@ -1,0 +1,41 @@
+{
+  "name": "contracts",
+  "version": "0.22.0",
+  "description": "Contract module for importing ethereum contracts",
+  "main": "build/index.js",
+  "typings": "build/index",
+  "scripts": {
+    "checkstyle": "tslint -c tslint.json 'src/**/*.ts' -t stylish",
+    "test": "truffle test",
+    "prestart": "bash scripts/unlock-accounts.sh",
+    "start": "truffle migrate --reset",
+    "build": "tsc && truffle compile && rm -rf ./migrations && mv ./build/migrations ./migrations",
+    "test-deploy": "node build/scripts/test-deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Milvum/contracts.git"
+  },
+  "keywords": [
+    "stemapp",
+    "API"
+  ],
+  "author": "Milvum",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "web3-instance": "file:../web3-instance"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.7",
+    "@types/underscore": "^1.8.1",
+    "solc": "^0.4.15",
+    "truffle": "^4.0.1",
+    "truffle-config": "^1.0.0",
+    "truffle-expect": "0.0.3",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.1",
+    "web3-typed": "git+https://git@github.com/cashila/web3-typed.git",
+    "winston": "^2.3.1"
+  }
+}
